@@ -3,7 +3,9 @@
   "version": "0.0.1",
   "description": "基于big.js实现一个解析JSON中的number类型超过双精度 Math.pow(2, 53)",
   "main": "./dist/index.js",
-  "scripts": {},
+  "scripts": {
+    "build": "rollup --config rollup.config.js"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/jobinben/json-bn.git"
@@ -15,5 +17,7 @@
     "url": "https://github.com/jobinben/json-bn/issues"
   },
   "homepage": "https://github.com/jobinben/json-bn#readme",
-  "devDependencies": {},
+  "devDependencies": {
+    "rollup": "^2.79.0"
+  }
 }
