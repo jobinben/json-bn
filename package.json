@@ -34,7 +34,7 @@
     "chai": "4.3.6",
     "mocha": "10.0.0",
     "rollup": "2.79.0",
-    "rollup-plugin-babel": "^4.4.0"
+    "rollup-plugin-babel": "4.4.0"
   },
   "dependencies": {
     "bignumber.js": "9.1.0"
