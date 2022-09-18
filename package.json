@@ -1,7 +1,7 @@
 {
   "name": "json-bn",
   "version": "0.0.1",
-  "description": "基于big.js实现一个解析JSON中的number类型超过双精度 Math.pow(2, 53)",
+  "description": "JSON.parse with BitInt support in all environments.",
   "main": "./dist/index.js",
   "scripts": {
     "build": "rollup --config rollup.config.js"
@@ -10,14 +10,23 @@
     "type": "git",
     "url": "git+https://github.com/jobinben/json-bn.git"
   },
-  "keywords": [],
-  "author": "jobin",
+  "keywords": [
+    "JSON",
+    "BigInt",
+    "bigint",
+    "big",
+    "parse",
+    "json"
+  ],
+  "author": "1021137079@qq.com",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/jobinben/json-bn/issues"
   },
   "homepage": "https://github.com/jobinben/json-bn#readme",
   "devDependencies": {
+    "chai": "^4.3.6",
+    "mocha": "^10.0.0",
     "rollup": "^2.79.0"
   },
   "dependencies": {

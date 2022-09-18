@@ -1,5 +1,5 @@
 export default {
-    input: './src/index.js',
+    input: './index.js',
     output: {
         name: 'jsonBn',
         file: './dist/bundle.js',

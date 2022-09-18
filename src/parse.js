@@ -57,9 +57,15 @@ const bn_parse = function (text, options) {
 	}
 
 	return JSON.parse(text.replace(rx, replacer), (k, v) => {
+		if (typeof v !== 'string') return v;
 		if (!v.startsWith(prefix)) return v;
 		const s = v.slice(prefix.length);
-
+		return _options.type === 'string' ? s
+				: _options.type === 'bigint' ? BigInt(s)
+				: _options.type === 'array' ? array(s)
+				: v;
 	});
 }
+
+module.exports = bn_parse;
 
