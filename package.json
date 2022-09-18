@@ -25,11 +25,11 @@
   },
   "homepage": "https://github.com/jobinben/json-bn#readme",
   "devDependencies": {
-    "chai": "^4.3.6",
-    "mocha": "^10.0.0",
-    "rollup": "^2.79.0"
+    "chai": "4.3.6",
+    "mocha": "10.0.0",
+    "rollup": "2.79.0"
   },
   "dependencies": {
-    "big.js": "^6.2.1"
+    "big.js": "6.2.1"
   }
 }
