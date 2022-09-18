@@ -3,6 +3,7 @@ const bn_parse = function (text, options) {
 	'use strict';
 
 	const rx =  /:\s*([-+Ee0-9.]+)/g
+		,deciRx = /[\.eE]/g
 		,spType = ['string', 'array', 'bigint']; // Type of conversion supported by big number
 	const prefix = 'prefixBn-';
 	
@@ -13,7 +14,7 @@ const bn_parse = function (text, options) {
 
 	if (options !== undefined && options !== null) {
 
-		if (spType.includes(options.type)) {
+		if (options.type && spType.includes(options.type)) {
 			_options.type = options.type;
 		}
 	}
@@ -60,12 +61,16 @@ const bn_parse = function (text, options) {
 		if (typeof v !== 'string') return v;
 		if (!v.startsWith(prefix)) return v;
 		const s = v.slice(prefix.length);
-		return _options.type === 'string' ? s
-				: _options.type === 'bigint' ? BigInt(s)
-				: _options.type === 'array' ? array(s)
+		return _options.type === 'string' 
+				? s
+				: _options.type === 'array' 
+				? array(s)
+				: deciRx.test(s)
+				? +s
+				: _options.type === 'bigint' 
+				? BigInt(s)
 				: v;
 	});
 }
 
-module.exports = bn_parse;
-
+export default bn_parse;

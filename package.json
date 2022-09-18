@@ -2,9 +2,12 @@
   "name": "json-bn",
   "version": "0.0.1",
   "description": "JSON.parse with BitInt support in all environments.",
-  "main": "./dist/index.js",
+  "main": "./dist/bundle-cjs.js",
+  "module": "./dist/bundle-es.js",
+  "type": "module",
   "scripts": {
-    "build": "rollup --config rollup.config.js"
+    "build": "rollup --config rollup.config.js",
+    "test": "mocha -R spec --check-leaks test/*-test.js"
   },
   "repository": {
     "type": "git",
@@ -15,6 +18,7 @@
     "BigInt",
     "bigint",
     "big",
+    "bigNumber",
     "parse",
     "json"
   ],
@@ -25,11 +29,14 @@
   },
   "homepage": "https://github.com/jobinben/json-bn#readme",
   "devDependencies": {
+    "@babel/core": "7.19.1",
+    "@babel/preset-env": "7.19.1",
     "chai": "4.3.6",
     "mocha": "10.0.0",
-    "rollup": "2.79.0"
+    "rollup": "2.79.0",
+    "rollup-plugin-babel": "^4.4.0"
   },
   "dependencies": {
-    "big.js": "6.2.1"
+    "bignumber.js": "9.1.0"
   }
 }
