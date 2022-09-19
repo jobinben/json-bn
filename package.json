@@ -1,7 +1,7 @@
 {
   "name": "json-bn",
   "version": "0.0.1",
-  "description": "JSON.parse with BitInt support in all environments.",
+  "description": "JSON.parse with BitInt support in ESM and CJS.",
   "main": "./dist/bundle-cjs.js",
   "module": "./dist/bundle-es.js",
   "type": "module",
