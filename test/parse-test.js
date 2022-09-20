@@ -15,7 +15,7 @@ describe('Testing support: parse', function () {
 
     it('Should support bigint type.', function(done) {
         const source = parse(jsonStr, {
-            type: 'bigint',
+            useType: 'bigint',
         });
         expect(typeof source.bn).to.equal('bigint');
         expect(source.bn).to.equal(18014398509481981n);
@@ -25,7 +25,7 @@ describe('Testing support: parse', function () {
 
     it('Should support array type.', function(done) {
         const source = parse(jsonStr, {
-            type: 'array',
+            useType: 'array',
         });
         expect(source.bn instanceof Array).to.equal(true);
         expect(source.bn.join('')).to.equal('18014398509481981');
@@ -45,5 +45,5 @@ describe('Testing support: parse', function () {
         done();
     });
     
-})
+});
 

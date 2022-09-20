@@ -1,4 +1,3 @@
-
 const bn_parse = function (text, options) {
 	'use strict';
 
@@ -9,13 +8,13 @@ const bn_parse = function (text, options) {
 	
 	// Default options one can override by passing options to the parse()
 	const _options = {
-		type: 'string',
+		useType: 'string',
 	}
 
 	if (options !== undefined && options !== null) {
 
-		if (options.type && spType.includes(options.type)) {
-			_options.type = options.type;
+		if (options.useType && spType.includes(options.useType)) {
+			_options.useType = options.useType;
 		}
 	}
 
@@ -61,13 +60,13 @@ const bn_parse = function (text, options) {
 		if (typeof v !== 'string') return v;
 		if (!v.startsWith(prefix)) return v;
 		const s = v.slice(prefix.length);
-		return _options.type === 'string' 
+		return _options.useType === 'string' 
 				? s
-				: _options.type === 'array' 
+				: _options.useType === 'array' 
 				? array(s)
 				: deciRx.test(s)
 				? +s
-				: _options.type === 'bigint' 
+				: _options.useType === 'bigint' 
 				? BigInt(s)
 				: v;
 	});
