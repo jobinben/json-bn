@@ -72,4 +72,4 @@ const bn_parse = function (text, options) {
 	});
 }
 
-export default bn_parse;
+export default bn_parse; 

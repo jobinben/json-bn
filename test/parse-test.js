@@ -1,7 +1,6 @@
 import { parse } from "../index.js";
 import { expect } from 'chai';
 
-
 describe('Testing support: parse', function () {
 
     const jsonStr = '{"name":"jobin","result":true,"bn":18014398509481981,"small":123,"deci":1234567890.0123456,"obj":{"bn":18014398509481983,"arr": [123, {"bn": 18014398509481987}]}}';
@@ -44,6 +43,6 @@ describe('Testing support: parse', function () {
         expect(source.obj.arr[1].bn).to.equal('18014398509481987');
         done();
     });
-    
+
 });
 
