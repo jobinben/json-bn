@@ -1,5 +1,4 @@
 const bn_parse = function (text, options) {
-	'use strict';
 
 	const rx =  /:\s*([-+Ee0-9.]+)/g
 		,deciRx = /[\.eE]/g

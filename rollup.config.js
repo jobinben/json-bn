@@ -1,20 +1,22 @@
 import RollupPluginBabel from 'rollup-plugin-babel';
+import {terser} from "rollup-plugin-terser";
 
 export default {
     input: './index.js',
     output: [
         {
-            file: './dist/bundle-es.js',
+            file: './dist/index.mjs',
             format: 'es'
         },
         {
-            file: './dist/bundle-cjs.js',
+            file: './dist/index.js',
             format: 'cjs'
         }
     ],
     plugins: [
         RollupPluginBabel({
             exclude: 'node_modules/**'
-        })
+        }),
+        terser()
     ]
 }
