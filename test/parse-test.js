@@ -1,5 +1,5 @@
-import { parse } from "../index.js";
-import { expect } from 'chai';
+const { parse } =  require('../dist/index.js');
+const { expect } = require('chai');
 
 describe('Testing support: parse', function () {
 

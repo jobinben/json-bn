@@ -1,10 +1,9 @@
 {
   "name": "json-bn",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "description": "JSON.parse with BitInt support in ESM and CJS.",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
-  "type": "module",
   "scripts": {
     "build": "rollup --config rollup.config.js",
     "test": "mocha -R spec --check-leaks test/*-test.js"

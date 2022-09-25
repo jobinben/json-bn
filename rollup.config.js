@@ -2,7 +2,7 @@ import RollupPluginBabel from 'rollup-plugin-babel';
 import {terser} from "rollup-plugin-terser";
 
 export default {
-    input: './index.js',
+    input: './index.mjs',
     output: [
         {
             file: './dist/index.mjs',
