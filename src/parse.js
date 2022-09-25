@@ -3,7 +3,7 @@ const bn_parse = function (text, options) {
 	const rx =  /:\s*([-+Ee0-9.]+)/g
 		,deciRx = /[\.eE]/g
 		,spType = ['string', 'array', 'bigint']; // Type of conversion supported by big number
-	const prefix = 'prefixBn-';
+	const prefix = '/*prefixBn*/';
 	
 	// Default options one can override by passing options to the parse()
 	const _options = {
