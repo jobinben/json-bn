@@ -1,11 +1,15 @@
-
 <div style="display:flex; flex-direction: row; align-items: center;">
-    <img  src='./static/tiramisu.svg'></img>
+    <a href="https://imgse.com/i/xEHmSU"><img src="https://s1.ax1x.com/2022/09/25/xEHmSU.png" alt="xEHmSU.png" border="0" /></a>
     <strong style="font-size:36px; margin-left:20px;">json-bn</strong>
 </div>
 
 
-[![Build Status](https://www.travis-ci.com/jobinben/json-bn.svg?branch=main)](https://www.travis-ci.com/jobinben/json-bn) ![npm](https://img.shields.io/npm/v/json-bn?color=1&logo=json-bn) ![NPM](https://img.shields.io/npm/l/json-bn) ![npm](https://img.shields.io/npm/dy/json-bn)
+[![Build Status](https://www.travis-ci.com/jobinben/json-bn.svg?branch=main)](https://www.travis-ci.com/jobinben/json-bn) ![npm](https://img.shields.io/npm/v/json-bn?color=1&logo=json-bn) ![NPM](https://img.shields.io/npm/l/json-bn) ![npm](https://img.shields.io/npm/dm/json-bn)
+
+json-bn is a library to solve the problem of big number double precision loss when parsing JSON string. It can also convert big numbers to the type you want according to your configuration, such as bigint, string, etc.
+
+While most JSON parsers assume numeric values have same precision restrictions as IEEE 754 double, JSON specification _does not_ say anything about number precision. 
+
 
 ESM: 
 ```
