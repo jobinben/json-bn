@@ -10,6 +10,10 @@ json-bn is a library to solve the problem of big number double precision loss wh
 
 While most JSON parsers assume numeric values have same precision restrictions as IEEE 754 double, JSON specification _does not_ say anything about number precision. 
 
+Install
+```
+npm i json-bn
+```
 
 ESM: 
 ```
